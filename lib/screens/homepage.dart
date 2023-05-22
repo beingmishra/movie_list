@@ -81,6 +81,7 @@ class Homepage extends StatelessWidget {
                   ),
                   confirmDismiss: (direction) async {
                     if (direction == DismissDirection.endToStart) {
+                      controller.deleteItem(controller.data[i].id.toString());
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text('Deleted ${controller.data[i].title}'),
